@@ -133,6 +133,27 @@ label start:
 
     r "Preciso recuperar a minha receita"
 
+    menu buy_staff:
+        "O que fazer?"
+        "Ir atrás do Mendigan":
+            jump buy_staff_no
+        "Comprar um cajado":
+            jump buy_staff_yes
+    
+    label buy_staff_no:
+        r "Vou atrás daquele malandro e matar ele!"
+
+    label buy_staff_yes:
+        r "Melhor eu comprar um cajado antes!"
+        
+        jump buy_staff_done
+
+    label buy_staff_done:
+        r "Jogo continua aqui"
+
+    
+        
+
     # This ends the game.
 
     return

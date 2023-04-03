@@ -714,7 +714,19 @@ screen preferences():
 
     use game_menu(_("Preferences"), scroll="viewport"):
 
+                        ## Additional vboxes of type "radio_pref" or "check_pref" can be
+                ## added here, to add additional creator-defined preferences.
+
         vbox:
+            style_prefix "radio"
+            label "Language"
+
+            # Real languages should go alphabetical order by English name.
+            textbutton "Portuguese" text_font "DejaVuSans.ttf" action Language(None)
+            textbutton "English" text_font "DejaVuSans.ttf" action Language("english")
+
+        vbox:
+            
 
             hbox:
                 box_wrap True
@@ -1419,8 +1431,8 @@ screen quick_menu():
             yalign 1.0
 
             textbutton _("Voltar") action Rollback()
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
+            textbutton _("Pular") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("Automático") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
 
 
