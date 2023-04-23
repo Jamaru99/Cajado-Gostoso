@@ -322,3 +322,199 @@ translate english strings:
     old "Menu"
     new ""
 
+# TODO: Translation updated at 2023-04-23 19:21
+
+translate english strings:
+
+    # game/screens.rpy:252
+    old "Voltar"
+    new "Go Back"
+
+    # game/screens.rpy:253
+    old "Histórico"
+    new ""
+
+    # game/screens.rpy:254
+    old "Pular"
+    new ""
+
+    # game/screens.rpy:256
+    old "Salvar"
+    new ""
+
+    # game/screens.rpy:257
+    old "Q.Salvar"
+    new ""
+
+    # game/screens.rpy:258
+    old "Q.Carregar"
+    new ""
+
+    # game/screens.rpy:300
+    old "Iniciar"
+    new "Start"
+
+    # game/screens.rpy:308
+    old "Carregar"
+    new ""
+
+    # game/screens.rpy:310
+    old "Preferências"
+    new ""
+
+    # game/screens.rpy:318
+    old "Menu Principal"
+    new ""
+
+    # game/screens.rpy:325
+    old "Ajuda"
+    new ""
+
+    # game/screens.rpy:556
+    old "Versão [config.version!t]\n"
+    new ""
+
+    # game/screens.rpy:562
+    old "Criado por Delícia Studio"
+    new ""
+
+    # game/screens.rpy:598
+    old "Página {}"
+    new ""
+
+    # game/screens.rpy:640
+    old "vazio"
+    new ""
+
+    # game/screens.rpy:738
+    old "Exibição"
+    new ""
+
+    # game/screens.rpy:739
+    old "Janela"
+    new ""
+
+    # game/screens.rpy:740
+    old "Tela Cheia"
+    new ""
+
+    # game/screens.rpy:744
+    old "Avançar"
+    new ""
+
+    # game/screens.rpy:745
+    old "Texto não visto"
+    new ""
+
+    # game/screens.rpy:746
+    old "Após Escolhas"
+    new ""
+
+    # game/screens.rpy:747
+    old "Transições"
+    new ""
+
+    # game/screens.rpy:760
+    old "Velocidade de Texto"
+    new ""
+
+    # game/screens.rpy:764
+    old "Tempo de Avanço Automático"
+    new ""
+
+    # game/screens.rpy:771
+    old "Volume da Música"
+    new ""
+
+    # game/screens.rpy:778
+    old "Volume de Som"
+    new ""
+
+    # game/screens.rpy:788
+    old "Volume de Voz"
+    new ""
+
+    # game/screens.rpy:986
+    old "Teclado"
+    new ""
+
+    # game/screens.rpy:1004
+    old "Avança diálogo e ativa a interface."
+    new ""
+
+    # game/screens.rpy:1007
+    old "Espaço"
+    new ""
+
+    # game/screens.rpy:1008
+    old "Avança diálogo sem selecionar escolhas."
+    new ""
+
+    # game/screens.rpy:1011
+    old "Setas de direção"
+    new ""
+
+    # game/screens.rpy:1012
+    old "Navega pela interface."
+    new ""
+
+    # game/screens.rpy:1016
+    old "Acessa o menu do jogo."
+    new ""
+
+    # game/screens.rpy:1020
+    old "Pula o diálogo enquanto mantido pressionado."
+    new ""
+
+    # game/screens.rpy:1024
+    old "Ativa/desativa a opção de pular diálogo."
+    new ""
+
+    # game/screens.rpy:1028
+    old "Volta para o diálogo anterior."
+    new ""
+
+    # game/screens.rpy:1032
+    old "Avança para o próximo diálogo."
+    new ""
+
+    # game/screens.rpy:1036
+    old "Esconde a interface do usuário."
+    new ""
+
+    # game/screens.rpy:1040
+    old "Captura uma imagem da tela."
+    new ""
+
+    # game/screens.rpy:1044
+    old "Ativa/desativa a opção de auto-voz."
+    new ""
+
+    # game/screens.rpy:1048
+    old "Abre o menu de acessibilidade."
+    new ""
+
+    # game/screens.rpy:1054
+    old "Clique esquerdo"
+    new ""
+
+    # game/screens.rpy:1058
+    old "Clique do meio"
+    new ""
+
+    # game/screens.rpy:1062
+    old "Clique direito"
+    new ""
+
+    # game/screens.rpy:1066
+    old "Rolagem da roda do mouse para cima"
+    new ""
+
+    # game/screens.rpy:1070
+    old "Rolagem da roda do mouse para baixo"
+    new ""
+
+    # game/screens.rpy:1436
+    old "Automático"
+    new ""
+

@@ -16,7 +16,7 @@ translate english start_841ce5b1:
 translate english start_b44cdcaf:
 
     # r "Depois de anos de pesquisa e experiências"
-    r ""
+    r "After years of research"
 
 # game/script.rpy:28
 translate english start_4b35d8f3:
@@ -302,5 +302,17 @@ translate english strings:
 
     # game/script.rpy:136
     old "Comprar um cajado"
+    new ""
+
+# TODO: Translation updated at 2023-04-23 19:21
+
+translate english strings:
+
+    # game/script.rpy:136
+    old "O que fazer?"
+    new ""
+
+    # game/script.rpy:136
+    old "Ir atrás do Mendigan"
     new ""
 
