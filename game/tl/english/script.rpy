@@ -4,13 +4,13 @@
 translate english start_7269b5e6:
 
     # r "Já é meia noite"
-    r ""
+    r "It's midnight"
 
 # game/script.rpy:24
 translate english start_841ce5b1:
 
     # r "Estou bem próximo de conseguir descobrir a cura da Aids"
-    r ""
+    r "I am very close to discover the cure"
 
 # game/script.rpy:26
 translate english start_b44cdcaf:

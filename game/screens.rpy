@@ -250,12 +250,12 @@ screen quick_menu():
             yalign 1.0
 
             textbutton _("Voltar") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("Histórico") action ShowMenu('history')
+            textbutton _("Pular") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
+            textbutton _("Salvar") action ShowMenu('save')
+            textbutton _("Q.Salvar") action QuickSave()
+            textbutton _("Q.Carregar") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
 
 
@@ -297,17 +297,17 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("Iniciar") action Start()
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("Histórico") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("Salvar") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("Carregar") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Preferências") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -315,14 +315,14 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("Menu Principal") action MainMenu()
 
         textbutton _("Sobre") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("Ajuda") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -553,13 +553,13 @@ screen about():
         vbox:
 
             label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            text _("Versão [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Criado por Delícia Studio")
 
 
 style about_label is gui_label
@@ -583,19 +583,19 @@ screen save():
 
     tag menu
 
-    use file_slots(_("Save"))
+    use file_slots(_("Salvar"))
 
 
 screen load():
 
     tag menu
 
-    use file_slots(_("Load"))
+    use file_slots(_("Carregar"))
 
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    default page_name_value = FilePageNameInputValue(pattern=_("Página {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
 
     use game_menu(title):
 
@@ -637,7 +637,7 @@ screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("vazio")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):
@@ -712,14 +712,14 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(_("Preferências"), scroll="viewport"):
 
                         ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
 
         vbox:
             style_prefix "radio"
-            label "Language"
+            label "Idioma"
 
             # Real languages should go alphabetical order by English name.
             textbutton "Portuguese" text_font "DejaVuSans.ttf" action Language(None)
@@ -735,16 +735,16 @@ screen preferences():
 
                     vbox:
                         style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                        label _("Exibição")
+                        textbutton _("Janela") action Preference("display", "window")
+                        textbutton _("Tela Cheia") action Preference("display", "fullscreen")
 
                 vbox:
                     style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    label _("Avançar")
+                    textbutton _("Texto não visto") action Preference("skip", "toggle")
+                    textbutton _("Após Escolhas") action Preference("after choices", "toggle")
+                    textbutton _("Transições") action InvertSelected(Preference("transitions", "toggle"))
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
@@ -757,25 +757,25 @@ screen preferences():
 
                 vbox:
 
-                    label _("Text Speed")
+                    label _("Velocidade de Texto")
 
                     bar value Preference("text speed")
 
-                    label _("Auto-Forward Time")
+                    label _("Tempo de Avanço Automático")
 
                     bar value Preference("auto-forward time")
 
                 vbox:
 
                     if config.has_music:
-                        label _("Music Volume")
+                        label _("Volume da Música")
 
                         hbox:
                             bar value Preference("music volume")
 
                     if config.has_sound:
 
-                        label _("Sound Volume")
+                        label _("Volume de Som")
 
                         hbox:
                             bar value Preference("sound volume")
@@ -785,7 +785,7 @@ screen preferences():
 
 
                     if config.has_voice:
-                        label _("Voice Volume")
+                        label _("Volume de Voz")
 
                         hbox:
                             bar value Preference("voice volume")
@@ -887,7 +887,7 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
+    use game_menu(_("Histórico"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
 
         style_prefix "history"
 
@@ -974,7 +974,7 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("Help"), scroll="viewport"):
+    use game_menu(_("Ajuda"), scroll="viewport"):
 
         style_prefix "help"
 
@@ -983,7 +983,7 @@ screen help():
 
             hbox:
 
-                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
+                textbutton _("Teclado") action SetScreenVariable("device", "keyboard")
                 textbutton _("Mouse") action SetScreenVariable("device", "mouse")
 
                 if GamepadExists():
@@ -1001,74 +1001,75 @@ screen keyboard_help():
 
     hbox:
         label _("Enter")
-        text _("Advances dialogue and activates the interface.")
+        text _("Avança diálogo e ativa a interface.")
 
     hbox:
-        label _("Space")
-        text _("Advances dialogue without selecting choices.")
+        label _("Espaço")
+        text _("Avança diálogo sem selecionar escolhas.")
 
     hbox:
-        label _("Arrow Keys")
-        text _("Navigate the interface.")
+        label _("Setas de direção")
+        text _("Navega pela interface.")
 
     hbox:
         label _("Escape")
-        text _("Accesses the game menu.")
+        text _("Acessa o menu do jogo.")
 
     hbox:
         label _("Ctrl")
-        text _("Skips dialogue while held down.")
+        text _("Pula o diálogo enquanto mantido pressionado.")
 
     hbox:
         label _("Tab")
-        text _("Toggles dialogue skipping.")
+        text _("Ativa/desativa a opção de pular diálogo.")
 
     hbox:
         label _("Page Up")
-        text _("Rolls back to earlier dialogue.")
+        text _("Volta para o diálogo anterior.")
 
     hbox:
         label _("Page Down")
-        text _("Rolls forward to later dialogue.")
+        text _("Avança para o próximo diálogo.")
 
     hbox:
         label "H"
-        text _("Hides the user interface.")
+        text _("Esconde a interface do usuário.")
 
     hbox:
         label "S"
-        text _("Takes a screenshot.")
+        text _("Captura uma imagem da tela.")
 
     hbox:
         label "V"
-        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
+        text _("Ativa/desativa a opção de auto-voz.")
 
     hbox:
         label "Shift+A"
-        text _("Opens the accessibility menu.")
+        text _("Abre o menu de acessibilidade.")
 
 
 screen mouse_help():
 
     hbox:
-        label _("Left Click")
-        text _("Advances dialogue and activates the interface.")
+        label _("Clique esquerdo")
+        text _("Avança diálogo e ativa a interface.")
 
     hbox:
-        label _("Middle Click")
-        text _("Hides the user interface.")
+        label _("Clique do meio")
+        text _("Esconde a interface do usuário.")
 
     hbox:
-        label _("Right Click")
-        text _("Accesses the game menu.")
+        label _("Clique direito")
+        text _("Acessa o menu do jogo.")
 
     hbox:
-        label _("Mouse Wheel Up\nClick Rollback Side")
-        text _("Rolls back to earlier dialogue.")
+        label _("Rolagem da roda do mouse para cima")
+        text _("Volta para o diálogo anterior.")
 
     hbox:
-        label _("Mouse Wheel Down")
-        text _("Rolls forward to later dialogue.")
+        label _("Rolagem da roda do mouse para baixo")
+        text _("Avança para o próximo diálogo.")
+
 
 
 screen gamepad_help():
