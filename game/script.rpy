@@ -139,17 +139,8 @@ label start:
             jump buy_staff_no
         "Comprar um cajado":
             jump buy_staff_yes
-    
-    label buy_staff_no:
-        r "Vou atrás daquele malandro e matar ele!"
 
-    label buy_staff_yes:
-        r "Melhor eu comprar um cajado antes!"
-        
-        jump buy_staff_done
-
-    label buy_staff_done:
-        r "Jogo continua aqui"
+    r "teste"
 
     
         
