@@ -6,6 +6,7 @@
 define r = Character("Rashford")
 define m = Character("Mendigan")
 define e = Character("Enfermeira")
+
 # The game starts here.
 
 label start:
@@ -140,7 +141,8 @@ label start:
         "Comprar um cajado":
             jump buy_staff_yes
 
-    r "teste"
+    label buy_staff_done:
+        r "teste"
 
     
         
