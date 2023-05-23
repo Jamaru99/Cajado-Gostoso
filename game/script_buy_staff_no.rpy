@@ -40,4 +40,20 @@
 
     r "TO POCO ME FODENDO, DEVOLVE LOGO OU ENTÃO..."
 
+    m "Sou da família Asgard, que possui os melhores magos já vistos neste país."
+
+    r "..."
+
+    r "Essa não é a família que foi extinta por tentar dar um golpe de Estado?"
+
+    m "Não! Isso é o que a mídia controlada pelo governo publicou."
+
+    m "Minha família foi perseguida só por ser uma \"potencial ameaça à sociedade\", mesmo sem ter feito nada de errado..."
+
+    hide rashford
+
+    "(sumidão)"
+
+    m "Ué?"
+
     jump buy_staff_done

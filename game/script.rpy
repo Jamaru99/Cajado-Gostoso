@@ -142,7 +142,11 @@ label start:
             jump buy_staff_yes
 
     label buy_staff_done:
-        r "teste"
+        scene bg snowy_street with Dissolve(1)
+
+        r "Onde eu estava com a cabeça?"
+
+        r "Não tenho como enfrentar ele sem habilidade."
 
     
         

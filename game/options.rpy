@@ -208,4 +208,4 @@ init python:
 ## by a slash.
 
 # define build.itch_project = "renpytom/test-project"
-define config.steam_appid = 480
+# define config.steam_appid = 480
