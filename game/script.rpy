@@ -6,6 +6,7 @@
 define r = Character("Rashford")
 define m = Character("Mendigan")
 define e = Character("Enfermeira")
+define v = Character("Vendedor")
 
 # The game starts here.
 
@@ -148,8 +149,35 @@ label start:
 
         r "Não tenho como enfrentar ele sem habilidade."
 
+        r "Preciso comprar um cajado"
+
+        r "Vou na loja de magias."
+
+    scene bg store with Dissolve(1)
+
+    show rashford neutral
+
+    v "Olá! Como posso ajudar?"
+
+    r "Estou procurando um cajado, comecei a aprender agora."
+
+    v "Ah sim! Temos alguns modelos para iniciante. Qual tamanho você gostaria?"
     
-        
+    r "Humm... Tamanho importa?"
+
+    v "Com certeza! Quanto maior melhor!"
+
+    r "Okay, vou pegar este grandão aqui então.."
+
+    v "Senhor! Este não é o cajado!"
+
+    r "Ops, perdoe-me! Confundi."
+
+    v "T-tudo bem..."
+
+    v "Este é o cajado pra iniciante maior que tem"
+
+    r "Opa, valeu! Vou levar."
 
     # This ends the game.
 
