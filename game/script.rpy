@@ -3,10 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define r = Character("Rashford")
-define m = Character("Mendigan")
-define e = Character("Enfermeira")
-define v = Character("Vendedor")
+define rashford = Character("Rashford")
+define mendigan = Character("Mendigan")
+define nurse = Character("Nurse")
+define seller = Character("Seller")
+define mendy = Character("Mendy")
 
 # The game starts here.
 
@@ -19,121 +20,121 @@ label start:
         xalign 0.3
         yalign 0.6
 
-    r "Já é meia noite"
+    rashford "Já é meia noite"
 
     show rashford neutral
 
-    r "Estou bem próximo de conseguir descobrir a cura da Aids"
+    rashford "Estou bem próximo de conseguir descobrir a cura da Aids"
 
-    r "Depois de anos de pesquisa e experiências"
+    rashford "Depois de anos de pesquisa nurse experiências"
 
-    r "Sinto que hoje é o dia"
+    rashford "Sinto que hoje é o dia"
 
-    r "É agora"
+    rashford "É agora"
 
-    r "AAAAAAAAAA DESCOBRI"
+    rashford "AAAAAAAAAA DESCOBRI"
 
     "??? (barulho estranho)"
 
-    r "o que é isso? tem alguém aí?"
+    rashford "o que é isso? tem alguém aí?"
 
-    m "OPAAAAAAAAAAAAAAAA"
+    mendigan "OPAAAAAAAAAAAAAAAA"
 
     show mendigan neutral at right with Dissolve(2.0)
 
-    m "CHEGAY"
+    mendigan "CHEGAY"
 
-    r "Quem é você? O que tá fazendo aqui?"
+    rashford "Quem é você? O que tá fazendo aqui?"
 
-    m "Comendo cú de curioso"
+    mendigan "Comendo cú de curioso"
 
-    r "..."
+    rashford "..."
 
-    m "Brinks"
+    mendigan "Brinks"
 
-    m "Vi que você descobriu a cura da Aids"
+    mendigan "Vi que você descobriu a cura da Aids"
 
-    m "AGORA PASSA PRA CÁ!!!"
+    mendigan "AGORA PASSA PRA CÁ!!!"
 
-    r "Ué, por que?"
+    rashford "Ué, por que?"
 
-    m "Porque eu vou vender"
+    mendigan "Porque eu vou vender"
 
-    r "Mas fui eu que descobri, é minha propriedade"
+    rashford "Mas fui eu que descobri, é minha propriedade"
 
-    m "Idaí? Me dá logo"
+    mendigan "Idaí? Me dá logo"
 
-    r "Não"
+    rashford "Não"
 
-    m "Ah é?"
+    mendigan "Ah é?"
 
     show mendigan attacking
 
-    m "Então pega no meu cajado!"
+    mendigan "Então pega no meu cajado!"
 
     show rashford hurt at left
 
-    r "AAAAAA"
+    rashford "AAAAAA"
 
-    r "VOCÊ NÃO PODE PEGAR"
+    rashford "VOCÊ NÃO PODE PEGAR"
 
     show mendigan neutral
 
-    m "Por quê? O que eu ganho se eu deixar com você"
+    mendigan "Por quê? O que eu ganho se eu deixar com você"
 
-    r "Nada! Mas é uma questão básica de respeito pelo próximo!"
+    rashford "Nada! Mas é uma questão básica de respeito pelo próximo!"
 
-    m "Mas dá pra ver que você é mais rico que eu. Eu sou pobre."
+    mendigan "Mas dá pra ver que você é mais rico que eu. Eu sou pobre."
 
-    r "Não justifica!!"
+    rashford "Não justifica!!"
 
-    m "Blá blá blá. Tchau!"
+    mendigan "Blá blá blá. Tchau!"
 
     hide mendigan
 
     hide tuboensaio
 
-    r "NÃAOOOOOOOOOOOOOOOOO"
+    rashford "NÃAOOOOOOOOOOOOOOOOO"
 
     show rashford dead at left
 
-    r "Acabou... como vou comprar dinheiro de joguinho online agora..."
+    rashford "Acabou... como vou comprar dinheiro de joguinho online agora..."
 
     scene bg hospital with Dissolve(1)
 
-    r "zzz"
+    rashford "zzz"
 
-    r "ahhh..."
+    rashford "ahhh..."
 
-    r "que grandão..."
+    rashford "que grandão..."
 
-    r "queria um cajado assim..."
+    rashford "queria um cajado assim..."
 
-    e "Sr. Rashford?"
+    nurse "Sr. Rashford?"
 
-    r "QUE??"
+    rashford "QUE??"
 
     show rashford neutral
 
-    r "ONDE É QUE EU TO????"
+    rashford "ONDE É QUE EU TO????"
 
-    e "Se acalme! Você precisa ficar de repouso..."
+    nurse "Se acalme! Você precisa ficar de repouso..."
 
-    r "Tchau"
+    rashford "Tchau"
 
     scene bg snowy_street with Dissolve(1)
 
-    r "Blé"
+    rashford "Blé"
 
     show rashford neutral
 
-    r "Tô puto"
+    rashford "Tô puto"
 
-    r "E triste"
+    rashford "nurse triste"
 
-    r "Não sei o que fazer"
+    rashford "Não sei o que fazer"
 
-    r "Preciso recuperar a minha receita"
+    rashford "Preciso recuperar a minha receita"
 
     menu buy_staff:
         "O que fazer?"
@@ -145,39 +146,109 @@ label start:
     label buy_staff_done:
         scene bg snowy_street with Dissolve(1)
 
-        r "Onde eu estava com a cabeça?"
+        rashford "Onde eu estava com a cabeça?"
 
-        r "Não tenho como enfrentar ele sem habilidade."
+        rashford "Não tenho como enfrentar ele sem habilidade."
 
-        r "Preciso comprar um cajado"
+        rashford "Preciso comprar um cajado"
 
-        r "Vou na loja de magias."
+        rashford "Vou na loja de magias."
 
     scene bg store with Dissolve(1)
 
     show rashford neutral
 
-    v "Olá! Como posso ajudar?"
+    seller "Olá! Como posso ajudar?"
 
-    r "Estou procurando um cajado, comecei a aprender agora."
+    rashford "Estou procurando um cajado, comecei a aprender agora."
 
-    v "Ah sim! Temos alguns modelos para iniciante. Qual tamanho você gostaria?"
+    seller "Ah sim! Temos alguns modelos para iniciante. Qual tamanho você gostaria?"
     
-    r "Humm... Tamanho importa?"
+    rashford "Humm... Tamanho importa?"
 
-    v "Com certeza! Quanto maior melhor!"
+    seller "Com certeza! Quanto maior melhor!"
 
-    r "Okay, vou pegar este grandão aqui então.."
+    rashford "Okay, vou pegar este grandão aqui então.."
 
-    v "Senhor! Este não é o cajado!"
+    seller "Senhor! Este não é o cajado!"
 
-    r "Ops, perdoe-me! Confundi."
+    rashford "Ops, perdoe-me! Confundi."
 
-    v "T-tudo bem..."
+    seller "T-tudo bem..."
 
-    v "Este é o cajado pra iniciante maior que tem"
+    seller "Este é o cajado pra iniciante maior que tem"
 
-    r "Opa, valeu! Vou levar."
+    rashford "Opa, valeu! Vou levar."
+
+    scene bg snowy_street with Dissolve(1)
+
+    "Eis que estou andando nurse..."
+
+    show mendy neutral at right
+
+    rashford "Opa, foi mal senhorita..."
+
+    rashford "Pera..."
+
+    rashford "Mendy???"
+
+    mendy "o-oi..."
+
+    rashford "Quanto tempo! Como você tá?"
+
+    mendy "Tô bem... e você?"
+
+    rashford "Tô bem também."
+
+    mendy "Que bom.."
+
+    rashford "Sim. Tchau!"
+
+    mendy "Ér... Rashford..."
+
+    rashford "Diga."
+
+    mendy "Você tá bem mesmo?"
+
+    rashford "Humm... Na verdade não. Mas sempre respondo que ta tudo bem."
+
+    mendy "Entendo... Vi que está andando com um cajado..."
+
+    rashford "Ah sim! Estou furioso!"
+
+    mendy "E posso saber o porquê?"
+
+    rashford "Um maluco roubou a minha descoberta científica que iria curar a cidade inteira da pandemia, e vai ficar com os créditos!"
+
+    mendy "Oh.. Que droga.."
+
+    rashford "Agora vou lá matar ele!"
+
+    mendy "Espera!"
+
+    rashford "O que foi?"
+
+    mendy "Rash... Você sabe usar um cajado?"
+
+    rashford "..."
+
+    rashford "Como assim? Não é só apontar e atirar?"
+
+    mendy "Não.. precisa de muita prática."
+
+    rashford "Puta merda!"
+
+    mendy "Ér.. se você quiser eu te ensino..."
+
+    rashford "Sério? De graça?"
+
+    mendy "Ah pode ser... Ou então pode me pagar em favores.."
+
+    rashford "Pois eu faço o que você quiser!"
+
+    mendy "Ok, então vamos ali no parque treinar."
+
+    rashford "Fechou!"
 
     # This ends the game.
 
