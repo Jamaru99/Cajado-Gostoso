@@ -5,8 +5,8 @@
 
 define rashford = Character("Rashford")
 define mendigan = Character("Mendigan")
-define nurse = Character("Nurse")
-define seller = Character("Seller")
+define enfermeira = Character("Enfermeira")
+define vendedor = Character("Vendedor")
 define mendy = Character("Mendy")
 
 # The game starts here.
@@ -26,7 +26,7 @@ label start:
 
     rashford "Estou bem próximo de conseguir descobrir a cura da Aids"
 
-    rashford "Depois de anos de pesquisa nurse experiências"
+    rashford "Depois de anos de pesquisa e experiências"
 
     rashford "Sinto que hoje é o dia"
 
@@ -110,7 +110,7 @@ label start:
 
     rashford "queria um cajado assim..."
 
-    nurse "Sr. Rashford?"
+    enfermeira "Sr. Rashford?"
 
     rashford "QUE??"
 
@@ -118,7 +118,7 @@ label start:
 
     rashford "ONDE É QUE EU TO????"
 
-    nurse "Se acalme! Você precisa ficar de repouso..."
+    enfermeira "Se acalme! Você precisa ficar de repouso..."
 
     rashford "Tchau"
 
@@ -130,7 +130,7 @@ label start:
 
     rashford "Tô puto"
 
-    rashford "nurse triste"
+    rashford "E triste"
 
     rashford "Não sei o que fazer"
 
@@ -139,116 +139,133 @@ label start:
     menu buy_staff:
         "O que fazer?"
         "Ir atrás do Mendigan":
+            $ buy_staff_choice = False
             jump buy_staff_no
         "Comprar um cajado":
-            jump buy_staff_yes
+            $ buy_staff_choice = True
+            rashford "Melhor eu comprar um cajado antes!"
+            jump staff_store
 
     label buy_staff_done:
         scene bg snowy_street with Dissolve(1)
 
         rashford "Onde eu estava com a cabeça?"
 
-        rashford "Não tenho como enfrentar ele sem habilidade."
+        rashford "Não tenho como enfrentar ele sem de mãos vazias."
 
         rashford "Preciso comprar um cajado"
 
         rashford "Vou na loja de magias."
 
-    scene bg store with Dissolve(1)
+    label staff_store:
 
-    show rashford neutral
+        scene bg store with Dissolve(1)
 
-    seller "Olá! Como posso ajudar?"
+        show rashford neutral
 
-    rashford "Estou procurando um cajado, comecei a aprender agora."
+        vendedor "Olá! Como posso ajudar?"
 
-    seller "Ah sim! Temos alguns modelos para iniciante. Qual tamanho você gostaria?"
-    
-    rashford "Humm... Tamanho importa?"
+        rashford "Estou procurando um cajado, comecei a aprender agora."
 
-    seller "Com certeza! Quanto maior melhor!"
+        vendedor "Ah sim! Temos alguns modelos para iniciante. Qual tamanho você gostaria?"
+        
+        rashford "Humm... Tamanho importa?"
 
-    rashford "Okay, vou pegar este grandão aqui então.."
+        vendedor "Com certeza! Quanto maior melhor!"
 
-    seller "Senhor! Este não é o cajado!"
+        rashford "Okay, vou pegar este grandão aqui então.."
 
-    rashford "Ops, perdoe-me! Confundi."
+        vendedor "Senhor! Este não é o cajado!"
 
-    seller "T-tudo bem..."
+        rashford "Ops, perdoe-me! Confundi."
 
-    seller "Este é o cajado pra iniciante maior que tem"
+        vendedor "T-tudo bem..."
 
-    rashford "Opa, valeu! Vou levar."
+        vendedor "Este é o cajado pra iniciante maior que tem"
 
-    scene bg snowy_street with Dissolve(1)
+        rashford "Opa, valeu! Vou levar."
 
-    "Eis que estou andando nurse..."
+        if buy_staff_choice == True: 
+            rashford "Agora vou atrás daquele maluco!"
+            jump buy_staff_yes
 
-    show mendy neutral at right
+    label meeting_mendy:
 
-    rashford "Opa, foi mal senhorita..."
+        scene bg snowy_street with Dissolve(1)
 
-    rashford "Pera..."
+        "Rashford sai da loja e tropeça em uma moça que estava passando"
 
-    rashford "Mendy???"
+        show mendy neutral:
+            xalign 0.75
+            yalign 1.0
 
-    mendy "o-oi..."
+        show rashford neutral:
+            xalign 0.25
+            yalign 1.0
 
-    rashford "Quanto tempo! Como você tá?"
+        rashford "Opa, foi mal senhorita..."
 
-    mendy "Tô bem... e você?"
+        rashford "Pera..."
 
-    rashford "Tô bem também."
+        rashford "Mendy???"
 
-    mendy "Que bom.."
+        mendy "o-oi..."
 
-    rashford "Sim. Tchau!"
+        rashford "Quanto tempo! Como você tá?"
 
-    mendy "Ér... Rashford..."
+        mendy "Tô bem... e você?"
 
-    rashford "Diga."
+        rashford "Tô bem também."
 
-    mendy "Você tá bem mesmo?"
+        mendy "Que bom.."
 
-    rashford "Humm... Na verdade não. Mas sempre respondo que ta tudo bem."
+        rashford "Sim. Tchau!"
 
-    mendy "Entendo... Vi que está andando com um cajado..."
+        mendy "Ér... Rashford..."
 
-    rashford "Ah sim! Estou furioso!"
+        rashford "Diga."
 
-    mendy "E posso saber o porquê?"
+        mendy "Você tá bem mesmo?"
 
-    rashford "Um maluco roubou a minha descoberta científica que iria curar a cidade inteira da pandemia, e vai ficar com os créditos!"
+        rashford "Humm... Na verdade não. Mas sempre respondo que ta tudo bem."
 
-    mendy "Oh.. Que droga.."
+        mendy "Entendo... Vi que está andando com um cajado..."
 
-    rashford "Agora vou lá matar ele!"
+        rashford "Ah sim! Estou furioso!"
 
-    mendy "Espera!"
+        mendy "E posso saber o porquê?"
 
-    rashford "O que foi?"
+        rashford "Um maluco roubou a minha descoberta científica que iria curar a cidade inteira da pandemia, e vai ficar com os créditos!"
 
-    mendy "Rash... Você sabe usar um cajado?"
+        mendy "Oh.. Que droga.."
 
-    rashford "..."
+        rashford "Agora vou lá matar ele!"
 
-    rashford "Como assim? Não é só apontar e atirar?"
+        mendy "Espera!"
 
-    mendy "Não.. precisa de muita prática."
+        rashford "O que foi?"
 
-    rashford "Puta merda!"
+        mendy "Rash... Você sabe usar um cajado?"
 
-    mendy "Ér.. se você quiser eu te ensino..."
+        rashford "..."
 
-    rashford "Sério? De graça?"
+        rashford "Como assim? Não é só apontar e atirar?"
 
-    mendy "Ah pode ser... Ou então pode me pagar em favores.."
+        mendy "Não.. precisa de muita prática."
 
-    rashford "Pois eu faço o que você quiser!"
+        rashford "Puta merda!"
 
-    mendy "Ok, então vamos ali no parque treinar."
+        mendy "Ér.. se você quiser eu te ensino..."
 
-    rashford "Fechou!"
+        rashford "Sério? De graça?"
+
+        mendy "Ah pode ser... Ou então pode me pagar em favores.."
+
+        rashford "Pois eu faço o que você quiser!"
+
+        mendy "Ok, então vamos ali no parque treinar."
+
+        rashford "Fechou!"
 
     # This ends the game.
 
