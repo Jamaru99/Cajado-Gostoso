@@ -1,4 +1,4 @@
-﻿label buy_staff_no:
+﻿label mendigan_meeting:
     rashford "Vou atrás daquele malandro e matar ele!"
 
     hide rashford
@@ -55,5 +55,3 @@
     "(sumidão)"
 
     mendigan "Ué?"
-
-    jump buy_staff_done

@@ -277,7 +277,7 @@ translate english start_6796f5b0:
     r ""
 
 # game/script.rpy:143
-translate english buy_staff_no_a7f9866a:
+translate english bad_ending1_mendigan_meeting_a7f9866a:
 
     # r "Vou atrás daquele malandro e matar ele!"
     r ""
@@ -286,12 +286,6 @@ translate english buy_staff_no_a7f9866a:
 translate english buy_staff_yes_be54e1b2:
 
     # r "Melhor eu comprar um cajado antes!"
-    r ""
-
-# game/script.rpy:151
-translate english buy_staff_done_c6ba78ac:
-
-    # r "Jogo continua aqui"
     r ""
 
 translate english strings:
