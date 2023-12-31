@@ -75,3 +75,5 @@ label mendy_meeting:
     mendy "Ok, então vamos ali no parque treinar."
 
     rashford "Fechou!"
+
+    jump mendy_trainning
