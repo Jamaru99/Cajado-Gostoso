@@ -72,7 +72,7 @@ label mendy_meeting:
 
     rashford "Pois eu faço o que você quiser!"
 
-    mendy "Ok, então vamos ali no parque treinar."
+    mendy "Ok, então vamos ali no parque treinar de noite."
 
     rashford "Fechou!"
 
